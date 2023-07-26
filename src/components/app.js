@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import JournalList from "./journal/journal_list";
 
 export default class App extends Component {
   render() {
     return (
-      <div className='app'>
+      <div>
         <h1>React, Props, and State Deep Dive</h1>
+
+        <JournalList heading="List 1" />
       </div>
     );
   }
