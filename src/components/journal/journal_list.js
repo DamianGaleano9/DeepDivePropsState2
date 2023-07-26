@@ -21,7 +21,11 @@ export default class JournalList extends Component {
     }
 
     clearEntries = () => {
-        this.setState({ journalData: [] });
+        this.setState({ journalData: [], isOpen: false});
+      };
+
+      showAllEntries = () => {
+        this.setState({ journalData: rawJournalData, isOpen: true});
       };
 
     render() {
@@ -39,6 +43,8 @@ export default class JournalList extends Component {
                 <h2>{this.props.heading}</h2>
                 {journalEntries}
                 <button onClick={this.clearEntries}>Clear Our Journal Entries</button>
+                <button onClick={this.showAllEntries}>Show All Entries</button>
+
             </div>
         )
     }
